@@ -13,15 +13,16 @@
   </header>
   
   <main>
-    <form>
+    <form onsubmit="return false;">
       <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Digite seu texto"></textarea>
-      <button id="btn-criptofrafar">Criptografar</button>
+      <button id="btn-criptografar">Criptografar</button>
       <button id="btn-descriptografar">Descriptografar</button>
     </form>
 
     <div class="container-text">
       <img id="img-content" src="assets/sem-criptocrafia.png" alt="">
       <p id="text-result"></p>
+      <button id="copiar">Copiar</button>
     </div>
   </main>
 
