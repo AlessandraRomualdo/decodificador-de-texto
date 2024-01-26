@@ -176,6 +176,7 @@ a:hover {
   }
 
   .alerta {
+    width: 100%;
     position: unset;
     margin: auto;
   }
