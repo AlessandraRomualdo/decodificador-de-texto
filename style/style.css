@@ -27,17 +27,18 @@ form {
   height: 500px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #eee;
+  border: 1px solid #0A3871;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 form textarea {
   height: 273px;
   resize: none;
   padding: 10px;
-  border: 1px solid #eee;
+  border: 1px solid #0A3871;
   border-radius: 5px;
   margin-bottom: 10px;
 }
@@ -48,17 +49,39 @@ textarea, textarea::placeholder{
 }
 
 .div-btns {
-  margin: auto;
+  margin-top: 130px;
+  margin-left: auto;
   display: flex;
   gap: 8px;
+}
+
+.alerta {
+  width: 50%;
+  padding-left: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 90px;
+}
+
+.alerta img {
+  width: 20px;
+  height: 20px;
+}
+
+.alerta p {
+ padding-left: 5px;
 }
 
 #btn-criptografar {
   background: #0A3871;
   color: #fff;
   border-radius: 24px;
+  border: none;
   width: 328px;
   height: 67px;
+  font-size: 19px;
 }
 
 #btn-descriptografar {
@@ -68,7 +91,7 @@ textarea, textarea::placeholder{
   border-radius: 24px;
   width: 328px;
   height: 67px;
-  
+  font-size: 19px;
 }
 
 #copiar {
@@ -78,16 +101,25 @@ textarea, textarea::placeholder{
   border-radius: 24px;
   width: 328px;
   height: 67px;
+  margin-bottom: 10px;
+  font-size: 19px;
 }
 
 .container-text {
   height: 500px;
   padding: 10px 20px;
-  border: 1px solid #eee;
+  border: 1px solid #0A3871;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: end;
+}
+
+#text-result {
+  font-size: 19px;
+  color: #0A3871;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .container-text img {
@@ -118,11 +150,80 @@ a {
   padding: 10px 20px;
 }
 
-a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
+a:hover {
   background: #0A3871;
-  transition: width .3s;
+  color: #fff;
+  transition: ease-out .3s;
+
+}
+
+
+@media screen and (max-width: 1220px) { 
+  main {
+    flex-direction: column;
+    max-width: 100%;
+    gap: 8px;
+  }
+
+  form {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .alerta {
+    position: unset;
+    margin: auto;
+  }
+
+  .div-btns {
+    margin: auto;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #btn-criptografar {
+    width: 300px;
+    height: 67px;
+    font-size: 19px;
+  }
+
+  #btn-descriptografar {
+    width: 300px;
+    height: 67px;
+    font-size: 19px;
+  }
+
+  #copiar {
+    width: 300px;
+    height: 67px;
+    font-size: 19px;
+  }
+
+  .container-text {
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-text img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  footer {
+    height: 80px;
+  }
+
+  footer a {
+    margin-top: 0;
+    font-size: 15px;
+  }
 }
